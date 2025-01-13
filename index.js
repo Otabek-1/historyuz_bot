@@ -1,4 +1,7 @@
 const { Telegraf } = require('telegraf');
+const express = require('express');
+const app = express();
+
 
 // Botni token bilan boshlash
 const bot = new Telegraf('7792630380:AAFRjXIM2D9bwSsxULF-smf0oqFrZzkDrCo');
@@ -21,3 +24,4 @@ bot.start((ctx) => {
 
 // Botni ishga tushurish
 bot.launch();
+app.listen(9000, ()=>console.log("Started bot"));
