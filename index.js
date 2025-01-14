@@ -22,6 +22,10 @@ bot.start((ctx) => {
     });
   });
 
+app.get('/', (req,res)=>{
+    res.status(200).json({message:"Server is active"});
+});
+
 // Botni ishga tushurish
 bot.launch();
 app.listen(9000, ()=>console.log("Started bot"));
