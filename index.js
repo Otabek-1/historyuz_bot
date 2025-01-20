@@ -80,5 +80,13 @@ app.get('/', (req,res)=>{
 });
 
 // Botni ishga tushurish
-bot.launch();
+bot.launch({
+  polling: {
+    // Pollingni to'g'ri sozlash
+    interval: 300,   // So'rovlar orasidagi interval
+    timeout: 50,     // Kutilgan vaqt
+    limit: 100,      // Maksimal soni
+  }
+});
+
 app.listen(9000, ()=>console.log("Started bot"));
