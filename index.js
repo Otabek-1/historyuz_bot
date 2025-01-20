@@ -16,6 +16,8 @@ async function checkSubscription(ctx) {
     } else {
       return false;
     }
+    
+    
   } catch (error) {
     console.error('Obunani tekshirishda xato:', error);
     return false;
