@@ -19,6 +19,12 @@ async function checkSubscription(ctx) {
   }
 }
 
+setInterval(() => fetch('https://history-uz-backend.onrender.com/test'), 30000);
+
+app.get('/',(req,res)=>{
+  res.send('Server is live');
+})
+
 // /start komandasi yordamida foydalanuvchiga xabar yuborish
 bot.start(async (ctx) => {
   const isSubscribed = await checkSubscription(ctx);
