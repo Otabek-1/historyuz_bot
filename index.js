@@ -29,7 +29,7 @@ app.get('/',(req,res)=>{
 bot.start(async (ctx) => {
   const isSubscribed = await checkSubscription(ctx);
   if (isSubscribed) {
-    ctx.reply(`Assalomu alaykum! Siz kanalga obuna bo‘ldingiz. Web ilovaga o‘tish uchun quyidagi tugmani bosing.`, {
+    ctx.reply('Assalomu alaykum! Siz kanalga obuna bo‘ldingiz. Web ilovaga o‘tish uchun quyidagi tugmani bosing.', {
       reply_markup: {
         inline_keyboard: [
           [{
@@ -54,6 +54,8 @@ bot.start(async (ctx) => {
     });
   }
 });
+
+
 
 // Foydalanuvchi "A'zo bo'lish" tugmasini bosganda
 bot.action('subscribe', async (ctx) => {
